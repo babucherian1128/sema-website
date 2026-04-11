@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gallery - SEMA South Edmonton Malayalee Association</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-background": "#191c1d","surface": "#f8f9fa","background": "#f8f9fa","primary-fixed": "#d8e2ff",
+          "surface-container-high": "#e7e8e9","outline": "#747781","on-secondary": "#ffffff","outline-variant": "#c4c6d1",
+          "on-error": "#ffffff","on-primary": "#ffffff","tertiary-container": "#593600","primary": "#00255a",
+          "secondary-container": "#8fb3ff","on-secondary-fixed-variant": "#19458a","tertiary-fixed": "#ffddb9",
+          "primary-fixed-dim": "#aec6ff","surface-dim": "#d9dadb","surface-variant": "#e1e3e4","tertiary-fixed-dim": "#ffb961",
+          "on-secondary-container": "#174388","on-secondary-fixed": "#001a42","error": "#ba1a1a","inverse-on-surface": "#f0f1f2",
+          "on-surface-variant": "#44474f","secondary": "#365da3","surface-container": "#edeeef","secondary-fixed-dim": "#aec6ff",
+          "on-tertiary-fixed": "#2b1700","on-primary-fixed-variant": "#29457c","surface-container-lowest": "#ffffff",
+          "on-primary-fixed": "#001a42","inverse-surface": "#2e3132","primary-container": "#1e3c72","surface-bright": "#f8f9fa",
+          "on-tertiary-fixed-variant": "#663e00","on-error-container": "#93000a","surface-tint": "#425d95",
+          "on-tertiary-container": "#eb9605","tertiary": "#3c2200","surface-container-highest": "#e1e3e4",
+          "inverse-primary": "#aec6ff","surface-container-low": "#f3f4f5","on-tertiary": "#ffffff","error-container": "#ffdad6",
+          "on-surface": "#191c1d","on-primary-container": "#8da8e5","secondary-fixed": "#d8e2ff"
+        },
+        "borderRadius": {"DEFAULT": "0.25rem","lg": "0.5rem","xl": "0.75rem","full": "9999px"},
+        "fontFamily": {"headline": ["Plus Jakarta Sans"],"body": ["Manrope"],"label": ["Manrope"]}
+      }
+    }
+  }
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .heritage-gradient { background: linear-gradient(135deg, #00255a 0%, #1e3c72 100%); }
+  body { font-family: 'Manrope', sans-serif; }
+  h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+</style>
+</head>
+<body class="bg-surface text-on-surface">
+
+<!-- Top Navigation -->
+<nav class="bg-white/90 backdrop-blur-md shadow-sm top-0 sticky z-50">
+  <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+    <a href="index.html"><img alt="SEMA Logo" class="h-12 w-auto object-contain rounded-full" src="images/sema-logo.jpg"/></a>
+    <div class="hidden md:flex items-center gap-8">
+      <a class="text-slate-700 font-medium hover:text-amber-500 transition-colors duration-300" href="index.html">Home</a>
+      <a class="text-slate-700 font-medium hover:text-amber-500 transition-colors duration-300" href="about.html">About</a>
+      <a class="text-slate-700 font-medium hover:text-amber-500 transition-colors duration-300" href="events.html">Events</a>
+      <a class="text-amber-600 font-bold border-b-2 border-amber-500 pb-1" href="gallery.html">Gallery</a>
+      <a class="text-slate-700 font-medium hover:text-amber-500 transition-colors duration-300" href="contact.html">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="contact.html" class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-bold hover:scale-95 duration-200 transition-all">Join Us</a>
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-700"><span class="material-symbols-outlined">menu</span></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-6 py-4 space-y-3">
+    <a class="block text-slate-700 py-2" href="index.html">Home</a>
+    <a class="block text-slate-700 py-2" href="events.html">Events</a>
+    <a class="block text-amber-600 font-bold py-2" href="gallery.html">Gallery</a>
+    <a class="block text-slate-700 py-2" href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<main class="min-h-screen">
+<!-- Hero Header -->
+<header class="heritage-gradient py-20 px-6 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-5 pointer-events-none">
+    <span class="material-symbols-outlined text-[300px] absolute -right-20 -top-20">sailing</span>
+  </div>
+  <div class="max-w-7xl mx-auto relative z-10">
+    <span class="text-tertiary-fixed-dim font-label tracking-widest uppercase text-sm mb-4 block">Visual Memories</span>
+    <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tighter mb-6 leading-tight">Our Cultural <br/><span class="text-tertiary-fixed">Journey</span></h1>
+    <p class="text-white/80 max-w-2xl text-lg leading-relaxed">Capturing the vibrant essence of the Malayalee heritage in Edmonton. From festive Onam celebrations to competitive boat races and community service.</p>
+  </div>
+</header>
+
+<!-- Filter Section -->
+<section class="bg-surface-container-low py-8 sticky top-[72px] z-40 border-b border-outline-variant/10">
+  <div class="max-w-7xl mx-auto px-6 overflow-x-auto whitespace-nowrap flex items-center gap-3" id="gallery-filters">
+    <button class="bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold filter-btn active" data-filter="all">All Moments</button>
+    <button class="bg-surface-container-lowest text-on-surface-variant hover:bg-tertiary-fixed transition-colors px-6 py-2 rounded-full text-sm font-semibold filter-btn" data-filter="onam">Onam</button>
+    <button class="bg-surface-container-lowest text-on-surface-variant hover:bg-tertiary-fixed transition-colors px-6 py-2 rounded-full text-sm font-semibold filter-btn" data-filter="boat">Boat Race</button>
+    <button class="bg-surface-container-lowest text-on-surface-variant hover:bg-tertiary-fixed transition-colors px-6 py-2 rounded-full text-sm font-semibold filter-btn" data-filter="christmas">Christmas</button>
+    <button class="bg-surface-container-lowest text-on-surface-variant hover:bg-tertiary-fixed transition-colors px-6 py-2 rounded-full text-sm font-semibold filter-btn" data-filter="blood">Blood Donation</button>
+    <button class="bg-surface-container-lowest text-on-surface-variant hover:bg-tertiary-fixed transition-colors px-6 py-2 rounded-full text-sm font-semibold filter-btn" data-filter="cricket">Cricket</button>
+    <button class="bg-surface-container-lowest text-on-surface-variant hover:bg-tertiary-fixed transition-colors px-6 py-2 rounded-full text-sm font-semibold filter-btn" data-filter="food">Food (Sadya)</button>
+  </div>
+</section>
+
+<!-- Gallery Grid -->
+<section class="max-w-7xl mx-auto px-6 py-16">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6" id="gallery-grid">
+    <!-- Large Feature: Onam Thiruvathirakali -->
+    <div class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-xl bg-surface-container-highest aspect-square md:aspect-auto md:h-[620px] gallery-item" data-category="onam">
+      <img alt="Onam Thiruvathirakali performance at South Edmonton" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="images/onam-thiruvathirakali.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+        <span class="text-tertiary-fixed-dim text-xs font-bold tracking-widest uppercase mb-2">Heritage</span>
+        <h3 class="text-white text-2xl font-bold">Onam Celebration — Thiruvathirakali</h3>
+        <p class="text-white/80 mt-2 text-sm">The graceful group dance of Kerala, performed at South Edmonton Onam.</p>
+      </div>
+      <div class="absolute top-4 left-4 bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-xs font-bold">Featured</div>
+    </div>
+    <!-- Onam — Mahabali Group Photo -->
+    <div class="md:col-span-2 group relative overflow-hidden rounded-xl bg-surface-container-highest h-[300px] gallery-item" data-category="onam">
+      <img alt="Community group photo with Mahabali at Onam celebration" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="images/onam-mahabali-group.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+        <h3 class="text-white text-xl font-bold">Welcome Mahabali!</h3>
+        <p class="text-white/80 text-sm">SEMA community welcomes King Mahabali at Onam.</p>
+      </div>
+    </div>
+    <!-- Onam — Dance Performance -->
+    <div class="group relative overflow-hidden rounded-xl bg-surface-container-highest aspect-square gallery-item" data-category="onam">
+      <img alt="Dance performance at South Edmonton Onam celebration" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="images/onam-dance-performance.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+        <h3 class="text-white text-lg font-bold">Cultural Dance</h3>
+        <p class="text-white/80 text-xs">Vibrant dance performances lighting up the stage.</p>
+      </div>
+    </div>
+    <!-- Onam — Kids Dance -->
+    <div class="group relative overflow-hidden rounded-xl bg-surface-container-highest aspect-square gallery-item" data-category="onam">
+      <img alt="Kids dance performance at South Edmonton Onam celebration" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="images/onam-kids-dance.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+        <h3 class="text-white text-lg font-bold">Little Stars</h3>
+        <p class="text-white/80 text-xs">Young performers stealing the show at Onam.</p>
+      </div>
+    </div>
+    <!-- Food / Sadya — REAL PHOTO -->
+    <div class="md:col-span-2 group relative overflow-hidden rounded-xl bg-surface-container-highest h-[300px] gallery-item" data-category="food">
+      <img alt="Onam Sadya feast with community members in traditional sarees" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="images/onam-sadya-feast.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+        <h3 class="text-white text-2xl font-bold">The Great Sadya</h3>
+        <p class="text-white/80 mt-2 text-sm">Authentic Onasadhya feast — served with love on banana leaves.</p>
+      </div>
+    </div>
+    <!-- Onam — Kids Red Dance -->
+    <div class="group relative overflow-hidden rounded-xl bg-surface-container-highest aspect-square gallery-item" data-category="onam">
+      <img alt="Kids group dance performance at Onam" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="images/onam-kids-red-dance.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+        <h3 class="text-white text-lg font-bold">Junior Performers</h3>
+        <p class="text-white/80 text-xs">Energy and spirit from SEMA's youngest dancers.</p>
+      </div>
+    </div>
+    <!-- Christmas 2025 Poster -->
+    <div class="md:col-span-2 group relative overflow-hidden rounded-xl bg-surface-container-highest h-[300px] gallery-item" data-category="christmas">
+      <img alt="South Edmonton Malayalee Christmas and New Year Celebration 2025" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110" src="images/christmas-2025-poster.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+        <h3 class="text-white text-2xl font-bold">Christmas & New Year 2025</h3>
+        <p class="text-white/80 mt-2 text-sm">South Edmonton Malayalee Christmas & New Year celebration.</p>
+      </div>
+    </div>
+    <!-- Christmas 2023 Poster -->
+    <div class="md:col-span-2 group relative overflow-hidden rounded-xl bg-surface-container-highest h-[300px] gallery-item" data-category="christmas">
+      <img alt="South Edmonton Malayalee Christmas and New Year Celebration 2023" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110" src="images/christmas-2023-poster.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+        <h3 class="text-white text-2xl font-bold">Christmas Carol 2023</h3>
+        <p class="text-white/80 mt-2 text-sm">A night of carols, community warmth and festive cheer.</p>
+      </div>
+    </div>
+    <!-- Onam 2024 Event Banner -->
+    <div class="md:col-span-2 group relative overflow-hidden rounded-xl bg-surface-container-highest h-[220px] gallery-item" data-category="onam">
+      <img alt="South Edmonton Malayalee Onam 2024 event banner" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/onam-2024-banner.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+        <h3 class="text-white text-lg font-bold">Onam 2024 — Life Church</h3>
+        <p class="text-white/80 text-xs">The Most Awaited Onam 2024 at 4461 50 St NW.</p>
+      </div>
+    </div>
+    <!-- Onam Celebration Banner -->
+    <div class="md:col-span-2 group relative overflow-hidden rounded-xl bg-surface-container-highest h-[220px] gallery-item" data-category="onam">
+      <img alt="South Edmonton Malayalee Onam Celebration banner" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/onam-celebration-banner.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+        <h3 class="text-white text-lg font-bold">Onam Celebration</h3>
+        <p class="text-white/80 text-xs">ഏവർക്കും ഓണാശംസകൾ — Happy Onam to all!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load More -->
+  <div class="flex justify-center mt-16">
+    <button class="group flex items-center gap-2 bg-surface-container-high text-primary px-8 py-4 rounded-xl font-bold hover:bg-primary hover:text-white transition-all duration-300">
+      View Older Memories <span class="material-symbols-outlined group-hover:rotate-90 transition-transform">arrow_forward</span>
+    </button>
+  </div>
+</section>
+
+<!-- Heritage Banner -->
+<section class="max-w-7xl mx-auto px-6 mb-20">
+  <div class="heritage-gradient rounded-3xl p-12 relative overflow-hidden">
+    <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none"><span class="material-symbols-outlined text-[400px]">filter_vintage</span></div>
+    <div class="relative z-10 max-w-xl">
+      <h2 class="text-3xl font-bold text-white mb-4">Join our growing gallery</h2>
+      <p class="text-white/70 mb-8">Have photos from our events you'd like to share? Submit them to our community board and help us preserve our shared heritage.</p>
+      <a href="contact.html" class="bg-tertiary-fixed text-on-tertiary-fixed px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform inline-block">Submit Photos</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-blue-950 text-amber-400 grid grid-cols-1 md:grid-cols-4 gap-8 px-8 py-12 w-full">
+  <div class="flex flex-col gap-4">
+    <img alt="SEMA Logo" class="h-16 w-auto object-contain rounded-full" src="images/sema-logo.jpg"/>
+    <p class="text-slate-300 text-sm leading-relaxed">Preserving the vibrant culture of Kerala within the heart of Edmonton.</p>
+  </div>
+  <div class="flex flex-col gap-4">
+    <h4 class="text-white font-bold tracking-wider text-sm uppercase">Quick Links</h4>
+    <nav class="flex flex-col gap-2 text-slate-300">
+      <a class="hover:text-amber-400 transition-colors" href="about.html">About SEMA</a>
+      <a class="hover:text-amber-400 transition-colors" href="events.html">Upcoming Events</a>
+      <a class="text-amber-300 underline" href="gallery.html">Photo Gallery</a>
+      <a class="hover:text-amber-400 transition-colors" href="#">Membership</a>
+    </nav>
+  </div>
+  <div class="flex flex-col gap-4">
+    <h4 class="text-white font-bold tracking-wider text-sm uppercase">Support</h4>
+    <nav class="flex flex-col gap-2 text-slate-300">
+      <a class="hover:text-amber-400 transition-colors" href="#">Privacy Policy</a>
+      <a class="hover:text-amber-400 transition-colors" href="#">Terms of Service</a>
+      <a class="hover:text-amber-400 transition-colors" href="contact.html">Contact Support</a>
+      <a class="hover:text-amber-400 transition-colors" href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+  <div class="flex flex-col gap-4">
+    <h4 class="text-white font-bold tracking-wider text-sm uppercase">Newsletter</h4>
+    <p class="text-slate-300 text-sm">Stay updated with our community news.</p>
+    <div class="flex mt-2">
+      <input class="bg-white/10 border-none rounded-l-lg px-4 py-2 text-white w-full focus:ring-1 focus:ring-amber-400" placeholder="Email address" type="email"/>
+      <button class="bg-amber-400 text-blue-950 px-4 py-2 rounded-r-lg font-bold"><span class="material-symbols-outlined">send</span></button>
+    </div>
+  </div>
+  <div class="md:col-span-4 pt-12 mt-4 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+    <p class="text-slate-400 text-xs">© 2024 South Edmonton Malayalee Association. All Rights Reserved.</p>
+    <div class="flex gap-6">
+      <span class="material-symbols-outlined text-slate-300 cursor-pointer hover:text-amber-400">social_leaderboard</span>
+      <span class="material-symbols-outlined text-slate-300 cursor-pointer hover:text-amber-400">groups</span>
+      <span class="material-symbols-outlined text-slate-300 cursor-pointer hover:text-amber-400">mail</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+
+  // Gallery filter
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-primary', 'text-white');
+        b.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+      });
+      btn.classList.add('bg-primary', 'text-white');
+      btn.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+
+      const filter = btn.dataset.filter;
+      galleryItems.forEach(item => {
+        if (filter === 'all' || item.dataset.category === filter) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

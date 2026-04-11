@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About SEMA | South Edmonton Malayalee Association</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#d9dadb",
+                    "on-secondary-fixed-variant": "#19458a",
+                    "inverse-primary": "#aec6ff",
+                    "tertiary-fixed": "#ffddb9",
+                    "surface": "#f8f9fa",
+                    "on-primary-fixed-variant": "#29457c",
+                    "surface-container-low": "#f3f4f5",
+                    "primary-fixed": "#d8e2ff",
+                    "primary-fixed-dim": "#aec6ff",
+                    "on-surface-variant": "#44474f",
+                    "on-primary-container": "#8da8e5",
+                    "tertiary-container": "#593600",
+                    "on-background": "#191c1d",
+                    "inverse-surface": "#2e3132",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#f8f9fa",
+                    "tertiary-fixed-dim": "#ffb961",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "secondary": "#365da3",
+                    "on-surface": "#191c1d",
+                    "secondary-fixed-dim": "#aec6ff",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#425d95",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#f8f9fa",
+                    "on-tertiary-container": "#eb9605",
+                    "secondary-fixed": "#d8e2ff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "primary": "#00255a",
+                    "outline-variant": "#c4c6d1",
+                    "on-secondary-container": "#174388",
+                    "on-secondary-fixed": "#001a42",
+                    "on-primary-fixed": "#001a42",
+                    "surface-variant": "#e1e3e4",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-container": "#edeeef",
+                    "on-tertiary-fixed-variant": "#663e00",
+                    "tertiary": "#3c2200",
+                    "secondary-container": "#8fb3ff",
+                    "primary-container": "#1e3c72",
+                    "outline": "#747781",
+                    "on-tertiary-fixed": "#2b1700",
+                    "surface-container-highest": "#e1e3e4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.5rem",
+                    "lg": "0.75rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.heritage-overlay {
+    background-image: url(images/onam-celebration-banner.jpg);
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.03
+    }</style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-tertiary-fixed-dim selection:text-tertiary">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+  <div class="flex items-center gap-3">
+    <img alt="SEMA Logo" class="w-12 h-12" src="images/sema-logo.jpg"/>
+    <span class="text-2xl font-bold tracking-tighter text-[#00255a] dark:text-white font-headline">SEMA</span>
+  </div>
+  <div class="hidden md:flex items-center gap-8">
+    <a class="text-slate-600 dark:text-slate-400 hover:text-[#1e3c72] font-['Plus_Jakarta_Sans'] font-medium tracking-tight transition-all duration-300" href="index.html">Home</a>
+    <a class="text-[#1e3c72] dark:text-blue-400 font-bold border-b-2 border-[#eb9605] pb-1 font-['Plus_Jakarta_Sans'] tracking-tight" href="about.html">About</a>
+    <a class="text-slate-600 dark:text-slate-400 hover:text-[#1e3c72] font-['Plus_Jakarta_Sans'] font-medium tracking-tight transition-all duration-300" href="events.html">Events</a>
+    <a class="text-slate-600 dark:text-slate-400 hover:text-[#1e3c72] font-['Plus_Jakarta_Sans'] font-medium tracking-tight transition-all duration-300" href="gallery.html">Gallery</a>
+    <a class="text-slate-600 dark:text-slate-400 hover:text-[#1e3c72] font-['Plus_Jakarta_Sans'] font-medium tracking-tight transition-all duration-300" href="contact.html">Contact</a>
+    <button class="bg-primary text-white px-6 py-2.5 rounded-xl font-bold hover:scale-95 transition-all duration-200">Join Us</button>
+  </div>
+  <!-- Mobile hamburger -->
+  <button id="menuToggle" class="md:hidden p-2 rounded-lg text-[#00255a] hover:bg-slate-100">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+</div>
+<!-- Mobile menu -->
+<div id="mobileMenu" class="hidden md:hidden bg-white/95 backdrop-blur-xl border-t border-slate-100 px-6 py-4 space-y-3">
+  <a class="block text-slate-600 hover:text-[#1e3c72] font-['Plus_Jakarta_Sans'] font-medium py-2 transition-colors" href="index.html">Home</a>
+  <a class="block text-[#1e3c72] font-bold font-['Plus_Jakarta_Sans'] py-2 border-l-4 border-[#eb9605] pl-3" href="about.html">About</a>
+  <a class="block text-slate-600 hover:text-[#1e3c72] font-['Plus_Jakarta_Sans'] font-medium py-2 transition-colors" href="events.html">Events</a>
+  <a class="block text-slate-600 hover:text-[#1e3c72] font-['Plus_Jakarta_Sans'] font-medium py-2 transition-colors" href="gallery.html">Gallery</a>
+  <a class="block text-slate-600 hover:text-[#1e3c72] font-['Plus_Jakarta_Sans'] font-medium py-2 transition-colors" href="contact.html">Contact</a>
+  <button class="w-full bg-primary text-white px-6 py-2.5 rounded-xl font-bold mt-2">Join Us</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" src="images/onam-celebration-banner.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary-container/40"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 py-20">
+<div class="max-w-3xl">
+<span class="inline-block py-1 px-4 rounded-full bg-tertiary-fixed-dim text-on-tertiary-fixed-variant text-xs font-bold tracking-widest uppercase mb-6 font-label">ESTABLISHED IN EDMONTON</span>
+<h1 class="text-5xl md:text-7xl font-extrabold text-white font-headline leading-[1.1] tracking-tighter mb-8">
+                        Preserving Our Heritage, <br/>
+<span class="text-tertiary-fixed-dim">Empowering Our Community</span>
+</h1>
+<p class="text-xl text-white/90 leading-relaxed font-body mb-10 max-w-2xl">
+                        SEMA is dedicated to fostering a vibrant home for the Malayalee diaspora in South Edmonton. We bridge generations through culture, sports, and a spirit of selfless service.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-tertiary-fixed-dim text-on-tertiary-fixed px-8 py-4 rounded-xl font-bold text-lg hover:translate-y-[-2px] transition-all shadow-lg">Learn Our History</button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all">Download Charter</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Vision -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="bg-surface-container-lowest p-12 rounded-xl shadow-sm border-l-8 border-on-tertiary-container">
+<div class="mb-8 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<h2 class="text-3xl font-bold font-headline text-primary">Our Mission</h2>
+</div>
+<p class="text-lg leading-relaxed text-on-surface-variant">
+                        To unite the Malayalee community in South Edmonton by promoting our unique cultural identity, supporting newcomers, and contributing actively to the social fabric of Alberta through heritage-led initiatives.
+                    </p>
+</div>
+<div class="bg-primary p-12 rounded-xl shadow-xl relative overflow-hidden">
+<div class="heritage-overlay absolute inset-0"></div>
+<div class="relative z-10 text-white">
+<div class="mb-8 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed-dim flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">visibility</span>
+</div>
+<h2 class="text-3xl font-bold font-headline">Our Vision</h2>
+</div>
+<p class="text-lg leading-relaxed text-white/90">
+                            A flourishing, inclusive, and socially conscious community where every Malayalee in South Edmonton feels connected to their roots while thriving in their Canadian journey.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- The SEMA Journey -->
+<section class="py-24 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-20">
+<h2 class="text-4xl md:text-5xl font-black font-headline text-primary tracking-tight mb-4">The SEMA Journey</h2>
+<div class="w-24 h-1 bg-on-tertiary-container mx-auto"></div>
+</div>
+<div class="relative">
+<!-- Timeline Line -->
+<div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-outline-variant/30 transform -translate-x-1/2"></div>
+<div class="space-y-24">
+<!-- 2015 -->
+<div class="flex flex-col md:flex-row items-center gap-12 group">
+<div class="md:w-1/2 md:text-right">
+<span class="text-6xl font-black text-primary/10 font-headline group-hover:text-tertiary-fixed-dim transition-colors">2015</span>
+<h3 class="text-2xl font-bold text-primary mt-2">Humble Beginnings</h3>
+<p class="text-on-surface-variant mt-4 leading-relaxed">Starting with just 10 families, SEMA was founded in a living room in Ellerslie, driven by the desire to keep our language and traditions alive for our children.</p>
+</div>
+<div class="hidden md:flex w-12 h-12 rounded-full bg-primary text-white items-center justify-center relative z-10 border-4 border-surface shadow-md">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">fiber_manual_record</span>
+</div>
+<div class="md:w-1/2">
+<div class="rounded-xl overflow-hidden shadow-lg aspect-video">
+<img class="w-full h-full object-cover" src="images/onam-mahabali-group.jpg" alt="SEMA community members with Mahabali at Onam celebration"/>
+</div>
+</div>
+</div>
+<!-- 2020 -->
+<div class="flex flex-col md:flex-row-reverse items-center gap-12 group">
+<div class="md:w-1/2 md:text-left">
+<span class="text-6xl font-black text-primary/10 font-headline group-hover:text-tertiary-fixed-dim transition-colors">2020</span>
+<h3 class="text-2xl font-bold text-primary mt-2">Pivoting to Service</h3>
+<p class="text-on-surface-variant mt-4 leading-relaxed">During the global pandemic, SEMA transitioned to a support network, providing groceries and emotional support to quarantined families and international students.</p>
+</div>
+<div class="hidden md:flex w-12 h-12 rounded-full bg-primary text-white items-center justify-center relative z-10 border-4 border-surface shadow-md">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">fiber_manual_record</span>
+</div>
+<div class="md:w-1/2">
+<div class="rounded-xl overflow-hidden shadow-lg aspect-video">
+<img class="w-full h-full object-cover" src="images/onam-sadya-feast.jpg"/>
+</div>
+</div>
+</div>
+<!-- 2024 -->
+<div class="flex flex-col md:flex-row items-center gap-12 group">
+<div class="md:w-1/2 md:text-right">
+<span class="text-6xl font-black text-primary/10 font-headline group-hover:text-tertiary-fixed-dim transition-colors">2024</span>
+<h3 class="text-2xl font-bold text-primary mt-2">A Regional Powerhouse</h3>
+<p class="text-on-surface-variant mt-4 leading-relaxed">Now representing over 500 members, SEMA is a registered non-profit and a key partner for regional cultural festivals and sporting events.</p>
+</div>
+<div class="hidden md:flex w-12 h-12 rounded-full bg-primary text-white items-center justify-center relative z-10 border-4 border-surface shadow-md">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">fiber_manual_record</span>
+</div>
+<div class="md:w-1/2">
+<div class="rounded-xl overflow-hidden shadow-lg aspect-video">
+<img class="w-full h-full object-cover" src="images/onam-thiruvathirakali.jpg" alt="SEMA cultural stage performance — Thiruvathirakali at Onam 2024"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Pillars -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-3xl font-black font-headline text-primary mb-12">Our Community Pillars</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Pillar 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 hover:shadow-xl transition-shadow group">
+<div class="w-16 h-16 rounded-xl bg-on-tertiary-container/10 flex items-center justify-center text-on-tertiary-container mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">celebration</span>
+</div>
+<h3 class="text-2xl font-bold text-primary mb-4">Cultural Traditions</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">Preserving the vibrant celebrations of Onam, Christmas, and Vishu through community feasts and traditional arts.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface px-3 py-1 rounded-full text-xs font-bold text-primary border border-outline-variant/30">Pookkalam</span>
+<span class="bg-surface px-3 py-1 rounded-full text-xs font-bold text-primary border border-outline-variant/30">Sadhya</span>
+<span class="bg-surface px-3 py-1 rounded-full text-xs font-bold text-primary border border-outline-variant/30">Carols</span>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 hover:shadow-xl transition-shadow group">
+<div class="w-16 h-16 rounded-xl bg-primary-fixed/30 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">sports_cricket</span>
+</div>
+<h3 class="text-2xl font-bold text-primary mb-4">Sports &amp; Recreation</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">From the thrill of snake boat racing to the strategy of cricket, we promote physical health and team spirit.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface px-3 py-1 rounded-full text-xs font-bold text-primary border border-outline-variant/30">Boat Race</span>
+<span class="bg-surface px-3 py-1 rounded-full text-xs font-bold text-primary border border-outline-variant/30">APL Cricket</span>
+<span class="bg-surface px-3 py-1 rounded-full text-xs font-bold text-primary border border-outline-variant/30">Badminton</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 hover:shadow-xl transition-shadow group">
+<div class="w-16 h-16 rounded-xl bg-error-container/30 flex items-center justify-center text-error mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">volunteer_activism</span>
+</div>
+<h3 class="text-2xl font-bold text-primary mb-4">Community Service</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">Giving back through regular blood donation drives, winter clothing collections, and youth mentorship programs.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface px-3 py-1 rounded-full text-xs font-bold text-primary border border-outline-variant/30">Blood Drive</span>
+<span class="bg-surface px-3 py-1 rounded-full text-xs font-bold text-primary border border-outline-variant/30">Food Bank</span>
+<span class="bg-surface px-3 py-1 rounded-full text-xs font-bold text-primary border border-outline-variant/30">Youth Hub</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Achievements -->
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-6">
+<div class="bg-primary-container rounded-[2rem] p-12 text-white relative overflow-hidden">
+<div class="heritage-overlay absolute inset-0 opacity-10"></div>
+<div class="relative z-10">
+<h2 class="text-3xl font-black font-headline mb-12">Our Recent Achievements</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+<div>
+<div class="text-5xl font-black text-tertiary-fixed-dim mb-2">#1</div>
+<div class="text-xl font-bold mb-2">Boat Race Champions</div>
+<p class="text-white/70">Defending champions of the 2024 Regional Snake Boat Competition.</p>
+</div>
+<div class="border-y md:border-y-0 md:border-x border-white/10 py-8 md:py-0">
+<div class="text-5xl font-black text-tertiary-fixed-dim mb-2">Partner</div>
+<div class="text-xl font-bold mb-2">Canadian Blood Services</div>
+<p class="text-white/70">Top community contributor for blood donations in South Edmonton.</p>
+</div>
+<div>
+<div class="text-5xl font-black text-tertiary-fixed-dim mb-2">League</div>
+<div class="text-xl font-bold mb-2">Alberta Premier League</div>
+<p class="text-white/70">Founding member and key organizer of the APL Cricket tournament.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Join Us CTA -->
+<section class="py-24">
+<div class="max-w-5xl mx-auto px-6 text-center">
+<div class="bg-surface-container-highest p-1 bg-gradient-to-br from-tertiary-fixed-dim/20 to-primary/10 rounded-[2.5rem]">
+<div class="bg-surface-container-lowest rounded-[2.2rem] p-16">
+<img alt="SEMA Logo" class="w-20 h-20 mx-auto mb-8" src="images/sema-logo.jpg"/>
+<h2 class="text-4xl font-black font-headline text-primary mb-6">Become Part of the SEMA Family</h2>
+<p class="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-2xl mx-auto">
+                            Whether you're a new family in South Edmonton or looking to volunteer your time, there's a place for you here. Let's build a stronger community together.
+                        </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-white px-10 py-5 rounded-xl font-bold text-xl hover:shadow-2xl hover:translate-y-[-4px] transition-all">Become a Member</button>
+<button class="bg-on-tertiary-container text-white px-10 py-5 rounded-xl font-bold text-xl hover:shadow-2xl hover:translate-y-[-4px] transition-all">Volunteer Today</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#00255a] dark:bg-slate-950 w-full border-t border-white/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8 py-16">
+<div class="col-span-1 md:col-span-1"><img alt="SEMA Logo" class="w-12 h-12 mb-4" src="images/sema-logo.jpg"/>
+<div class="text-xl font-black text-white mb-4 font-headline uppercase tracking-widest">SEMA</div>
+<p class="font-['Manrope'] leading-relaxed text-slate-300">Preserving Kerala's rich heritage while building a supportive home in the heart of Edmonton.</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block font-['Manrope']" href="events.html">Events</a></li>
+<li><a class="text-slate-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block font-['Manrope']" href="#">Membership</a></li>
+<li><a class="text-slate-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block font-['Manrope']" href="#">Volunteer</a></li>
+<li><a class="text-slate-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block font-['Manrope']" href="gallery.html">Gallery</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block font-['Manrope']" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block font-['Manrope']" href="#">Terms of Service</a></li>
+<li><a class="text-slate-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block font-['Manrope']" href="#">Bylaws</a></li>
+<li><a class="text-slate-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block font-['Manrope']" href="#">Sponsorship</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Contact</h4>
+<p class="text-slate-400 font-['Manrope'] mb-2">South Edmonton, Alberta</p>
+<p class="text-slate-400 font-['Manrope'] mb-4">info@semaedmonton.ca</p>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-[#ffb961] cursor-pointer hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-lg">share</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-[#ffb961] cursor-pointer hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-lg">mail</span>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-8 border-t border-white/5 text-center">
+<p class="text-slate-500 text-sm font-['Manrope']">© 2024 South Edmonton Malayalee Association. Preserving Heritage, Building Community.</p>
+</div>
+</footer>
+<script>
+  document.getElementById('menuToggle').addEventListener('click', function() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+  });
+</script>
+</body></html>
