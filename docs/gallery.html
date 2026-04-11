@@ -54,12 +54,13 @@
       <a class="text-slate-700 font-medium hover:text-amber-500 transition-colors duration-300" href="contact.html">Contact</a>
     </div>
     <div class="flex items-center gap-3">
-      <a href="contact.html" class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-bold hover:scale-95 duration-200 transition-all">Join Us</a>
+      <a href="membership.html#membership" class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-bold hover:scale-95 duration-200 transition-all">Join Us</a>
       <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-700"><span class="material-symbols-outlined">menu</span></button>
     </div>
   </div>
   <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-6 py-4 space-y-3">
     <a class="block text-slate-700 py-2" href="index.html">Home</a>
+    <a class="block text-slate-700 py-2" href="about.html">About</a>
     <a class="block text-slate-700 py-2" href="events.html">Events</a>
     <a class="block text-amber-600 font-bold py-2" href="gallery.html">Gallery</a>
     <a class="block text-slate-700 py-2" href="contact.html">Contact</a>
@@ -181,9 +182,9 @@
 
   <!-- Load More -->
   <div class="flex justify-center mt-16">
-    <button class="group flex items-center gap-2 bg-surface-container-high text-primary px-8 py-4 rounded-xl font-bold hover:bg-primary hover:text-white transition-all duration-300">
-      View Older Memories <span class="material-symbols-outlined group-hover:rotate-90 transition-transform">arrow_forward</span>
-    </button>
+    <a href="contact.html#contact-form" class="group flex items-center gap-2 bg-surface-container-high text-primary px-8 py-4 rounded-xl font-bold hover:bg-primary hover:text-white transition-all duration-300">
+      Share Your Photos <span class="material-symbols-outlined group-hover:rotate-90 transition-transform">arrow_forward</span>
+    </a>
   </div>
 </section>
 
@@ -212,32 +213,31 @@
       <a class="hover:text-amber-400 transition-colors" href="about.html">About SEMA</a>
       <a class="hover:text-amber-400 transition-colors" href="events.html">Upcoming Events</a>
       <a class="text-amber-300 underline" href="gallery.html">Photo Gallery</a>
-      <a class="hover:text-amber-400 transition-colors" href="#">Membership</a>
+      <a class="hover:text-amber-400 transition-colors" href="membership.html#membership">Membership</a>
     </nav>
   </div>
   <div class="flex flex-col gap-4">
     <h4 class="text-white font-bold tracking-wider text-sm uppercase">Support</h4>
     <nav class="flex flex-col gap-2 text-slate-300">
-      <a class="hover:text-amber-400 transition-colors" href="#">Privacy Policy</a>
-      <a class="hover:text-amber-400 transition-colors" href="#">Terms of Service</a>
-      <a class="hover:text-amber-400 transition-colors" href="contact.html">Contact Support</a>
+      <a class="hover:text-amber-400 transition-colors" href="privacy.html">Privacy Policy</a>
+      <a class="hover:text-amber-400 transition-colors" href="terms.html">Terms of Service</a>
+      <a class="hover:text-amber-400 transition-colors" href="membership.html#documents">Documents</a>
       <a class="hover:text-amber-400 transition-colors" href="contact.html">Contact Us</a>
     </nav>
   </div>
   <div class="flex flex-col gap-4">
     <h4 class="text-white font-bold tracking-wider text-sm uppercase">Newsletter</h4>
     <p class="text-slate-300 text-sm">Stay updated with our community news.</p>
-    <div class="flex mt-2">
-      <input class="bg-white/10 border-none rounded-l-lg px-4 py-2 text-white w-full focus:ring-1 focus:ring-amber-400" placeholder="Email address" type="email"/>
-      <button class="bg-amber-400 text-blue-950 px-4 py-2 rounded-r-lg font-bold"><span class="material-symbols-outlined">send</span></button>
-    </div>
+    <a href="mailto:info@semaedmonton.ca?subject=SEMA%20Newsletter%20Signup" class="bg-amber-400 text-blue-950 px-4 py-2 rounded-lg font-bold inline-flex items-center justify-center gap-2 mt-2">
+      Email to Subscribe <span class="material-symbols-outlined">mail</span>
+    </a>
   </div>
   <div class="md:col-span-4 pt-12 mt-4 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-    <p class="text-slate-400 text-xs">© 2024 South Edmonton Malayalee Association. All Rights Reserved.</p>
+    <p class="text-slate-400 text-xs">© 2026 South Edmonton Malayalee Association. All Rights Reserved.</p>
     <div class="flex gap-6">
-      <span class="material-symbols-outlined text-slate-300 cursor-pointer hover:text-amber-400">social_leaderboard</span>
-      <span class="material-symbols-outlined text-slate-300 cursor-pointer hover:text-amber-400">groups</span>
-      <span class="material-symbols-outlined text-slate-300 cursor-pointer hover:text-amber-400">mail</span>
+      <a href="membership.html#membership" class="material-symbols-outlined text-slate-300 cursor-pointer hover:text-amber-400">groups</a>
+      <a href="events.html" class="material-symbols-outlined text-slate-300 cursor-pointer hover:text-amber-400">event</a>
+      <a href="mailto:info@semaedmonton.ca" class="material-symbols-outlined text-slate-300 cursor-pointer hover:text-amber-400">mail</a>
     </div>
   </div>
 </footer>

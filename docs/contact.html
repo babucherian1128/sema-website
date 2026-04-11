@@ -52,12 +52,13 @@
       <a class="text-amber-600 font-bold border-b-2 border-amber-500 pb-1" href="contact.html">Contact</a>
     </div>
     <div class="flex items-center gap-3">
-      <button class="bg-primary px-6 py-2 rounded-xl text-white font-semibold hover:scale-95 duration-200 transition-all heritage-gradient">Join Us</button>
+      <a href="membership.html#membership" class="bg-primary px-6 py-2 rounded-xl text-white font-semibold hover:scale-95 duration-200 transition-all heritage-gradient">Join Us</a>
       <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-700"><span class="material-symbols-outlined">menu</span></button>
     </div>
   </nav>
   <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-6 py-4 space-y-3">
     <a class="block text-slate-700 py-2" href="index.html">Home</a>
+    <a class="block text-slate-700 py-2" href="about.html">About</a>
     <a class="block text-slate-700 py-2" href="events.html">Events</a>
     <a class="block text-slate-700 py-2" href="gallery.html">Gallery</a>
     <a class="block text-amber-600 font-bold py-2" href="contact.html">Contact</a>
@@ -103,9 +104,9 @@
         <h3 class="font-headline font-bold text-2xl mb-4">Join the Community</h3>
         <p class="text-primary-fixed mb-6 opacity-90">Become a part of SEMA and stay updated on our vibrant cultural celebrations.</p>
         <div class="flex gap-4">
-          <a class="p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm transition-all" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
-          <a class="p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm transition-all" href="#"><span class="material-symbols-outlined">chat_bubble</span></a>
-          <a class="p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm transition-all" href="#"><span class="material-symbols-outlined">share</span></a>
+          <a class="p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm transition-all" href="membership.html#membership"><span class="material-symbols-outlined">groups</span></a>
+          <a class="p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm transition-all" href="events.html"><span class="material-symbols-outlined">event</span></a>
+          <a class="p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm transition-all" href="mailto:info@semaedmonton.ca"><span class="material-symbols-outlined">mail</span></a>
         </div>
       </div>
       <div class="absolute -bottom-12 -right-12 opacity-10 scale-150 rotate-12 group-hover:rotate-45 transition-transform duration-700">
@@ -121,16 +122,16 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="space-y-2">
           <label class="text-sm font-bold text-on-surface-variant uppercase tracking-wider ml-1">Full Name</label>
-          <input class="w-full px-6 py-4 rounded-xl border-none bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all outline-none text-on-surface" placeholder="John Doe" type="text" required/>
+          <input id="contact-name" class="w-full px-6 py-4 rounded-xl border-none bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all outline-none text-on-surface" placeholder="John Doe" type="text" required/>
         </div>
         <div class="space-y-2">
           <label class="text-sm font-bold text-on-surface-variant uppercase tracking-wider ml-1">Email Address</label>
-          <input class="w-full px-6 py-4 rounded-xl border-none bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all outline-none text-on-surface" placeholder="john@example.com" type="email" required/>
+          <input id="contact-email" class="w-full px-6 py-4 rounded-xl border-none bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all outline-none text-on-surface" placeholder="john@example.com" type="email" required/>
         </div>
       </div>
       <div class="space-y-2">
         <label class="text-sm font-bold text-on-surface-variant uppercase tracking-wider ml-1">Subject</label>
-        <select class="w-full px-6 py-4 rounded-xl border-none bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all outline-none text-on-surface appearance-none">
+        <select id="contact-subject" class="w-full px-6 py-4 rounded-xl border-none bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all outline-none text-on-surface appearance-none">
           <option>General Inquiry</option>
           <option>Event Participation</option>
           <option>Membership Questions</option>
@@ -139,14 +140,14 @@
       </div>
       <div class="space-y-2">
         <label class="text-sm font-bold text-on-surface-variant uppercase tracking-wider ml-1">Your Message</label>
-        <textarea class="w-full px-6 py-4 rounded-xl border-none bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all outline-none text-on-surface resize-none" placeholder="How can we help you?" rows="5" required></textarea>
+        <textarea id="contact-message" class="w-full px-6 py-4 rounded-xl border-none bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all outline-none text-on-surface resize-none" placeholder="How can we help you?" rows="5" required></textarea>
       </div>
       <button class="w-full heritage-gradient text-white font-bold py-5 rounded-xl hover:scale-[0.98] transition-all shadow-lg flex items-center justify-center gap-3" type="submit">
         Send Message <span class="material-symbols-outlined text-lg">send</span>
       </button>
     </form>
     <div id="success-msg" class="hidden mt-4 p-4 bg-emerald-50 text-emerald-700 rounded-xl font-semibold text-center">
-      ✓ Message sent! We'll get back to you soon.
+      Your email app should open with a draft message to SEMA. If it does not, use <a id="mailto-link" class="underline font-bold" href="mailto:info@semaedmonton.ca">this email link</a>.
     </div>
   </div>
 </div>
@@ -162,7 +163,7 @@
         <h4 class="font-headline font-bold text-primary">South Edmonton</h4>
       </div>
       <p class="text-sm text-on-surface-variant mb-4">Centrally located to serve the vibrant Malayalee community across the South Edmonton region.</p>
-      <button class="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">Get Directions <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+      <a href="https://www.google.com/maps/search/?api=1&query=South+Edmonton,+Alberta" target="_blank" rel="noreferrer" class="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">Get Directions <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
     </div>
   </div>
 </section>
@@ -178,21 +179,21 @@
     <div>
       <h4 class="text-amber-400 font-headline font-bold mb-6">Quick Links</h4>
       <ul class="space-y-4">
-        <li><a class="text-slate-300 hover:text-amber-400 transition-colors" href="#">Privacy Policy</a></li>
-        <li><a class="text-slate-300 hover:text-amber-400 transition-colors" href="#">Terms of Service</a></li>
-        <li><a class="text-slate-300 hover:text-amber-400 transition-colors" href="contact.html">Contact Support</a></li>
+        <li><a class="text-slate-300 hover:text-amber-400 transition-colors" href="privacy.html">Privacy Policy</a></li>
+        <li><a class="text-slate-300 hover:text-amber-400 transition-colors" href="terms.html">Terms of Service</a></li>
+        <li><a class="text-slate-300 hover:text-amber-400 transition-colors" href="membership.html#documents">Documents</a></li>
       </ul>
     </div>
     <div>
       <h4 class="text-amber-400 font-headline font-bold mb-6">Follow Us</h4>
       <div class="flex gap-4">
-        <a class="text-white opacity-80 hover:opacity-100 hover:text-amber-400 transition-all" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
-        <a class="text-white opacity-80 hover:opacity-100 hover:text-amber-400 transition-all" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+        <a class="text-white opacity-80 hover:opacity-100 hover:text-amber-400 transition-all" href="membership.html#membership"><span class="material-symbols-outlined">groups</span></a>
+        <a class="text-white opacity-80 hover:opacity-100 hover:text-amber-400 transition-all" href="mailto:info@semaedmonton.ca"><span class="material-symbols-outlined">alternate_email</span></a>
       </div>
     </div>
   </div>
   <div class="w-full border-t border-white/10 py-6 px-8 flex justify-center">
-    <p class="text-slate-500 text-sm">© 2024 South Edmonton Malayalee Association. All Rights Reserved.</p>
+    <p class="text-slate-500 text-sm">© 2026 South Edmonton Malayalee Association. All Rights Reserved.</p>
   </div>
 </footer>
 
@@ -202,9 +203,16 @@
   });
   document.getElementById('contact-form').addEventListener('submit', (e) => {
     e.preventDefault();
+    const name = document.getElementById('contact-name').value.trim();
+    const email = document.getElementById('contact-email').value.trim();
+    const topic = document.getElementById('contact-subject').value;
+    const message = document.getElementById('contact-message').value.trim();
+    const subject = encodeURIComponent(`SEMA Contact: ${topic}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nTopic: ${topic}\n\nMessage:\n${message}`);
+    const mailto = `mailto:info@semaedmonton.ca?subject=${subject}&body=${body}`;
+    document.getElementById('mailto-link').href = mailto;
     document.getElementById('success-msg').classList.remove('hidden');
-    e.target.reset();
-    setTimeout(() => document.getElementById('success-msg').classList.add('hidden'), 5000);
+    window.location.href = mailto;
   });
 </script>
 </body>

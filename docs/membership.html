@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Membership & Community Support - SEMA</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          primary: "#00255a",
+          "primary-container": "#1e3c72",
+          tertiary: "#3c2200",
+          "tertiary-fixed": "#ffddb9",
+          "tertiary-fixed-dim": "#ffb961",
+          surface: "#f8f9fa",
+          "surface-container-low": "#f3f4f5",
+          "surface-container-lowest": "#ffffff",
+          "on-surface": "#191c1d",
+          "on-surface-variant": "#44474f",
+          outline: "#747781"
+        },
+        fontFamily: {
+          headline: ["Plus Jakarta Sans"],
+          body: ["Manrope"]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .heritage-gradient { background: linear-gradient(135deg, #00255a 0%, #1e3c72 100%); }
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body">
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+  <nav class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+    <a href="index.html"><img alt="SEMA Logo" class="h-12 w-auto object-contain rounded-full" src="images/sema-logo.jpg"/></a>
+    <div class="hidden md:flex gap-8 items-center">
+      <a class="text-slate-700 font-medium hover:text-amber-500 transition-colors duration-300" href="index.html">Home</a>
+      <a class="text-slate-700 font-medium hover:text-amber-500 transition-colors duration-300" href="about.html">About</a>
+      <a class="text-slate-700 font-medium hover:text-amber-500 transition-colors duration-300" href="events.html">Events</a>
+      <a class="text-slate-700 font-medium hover:text-amber-500 transition-colors duration-300" href="gallery.html">Gallery</a>
+      <a class="text-slate-700 font-medium hover:text-amber-500 transition-colors duration-300" href="contact.html">Contact</a>
+    </div>
+    <a href="#membership" class="bg-primary text-white px-6 py-2 rounded-xl font-semibold hover:scale-95 duration-200 transition-all">Join Us</a>
+  </nav>
+</header>
+
+<main>
+  <section class="heritage-gradient py-20 px-6 text-white">
+    <div class="max-w-5xl mx-auto">
+      <span class="inline-block rounded-full bg-white/10 px-4 py-1 text-xs font-bold tracking-widest uppercase">Get Involved</span>
+      <h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight mt-6 mb-6">Membership, Volunteering, and Support</h1>
+      <p class="max-w-3xl text-lg text-white/85 leading-relaxed">This page collects the key community pathways for joining SEMA, volunteering at events, requesting documents, and starting sponsorship conversations while the full member portal is being built.</p>
+    </div>
+  </section>
+
+  <section class="py-16 px-6 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <article id="membership" class="bg-surface-container-lowest rounded-2xl p-8 shadow-sm border border-slate-200">
+      <div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6"><span class="material-symbols-outlined text-3xl">groups</span></div>
+      <h2 class="font-headline text-2xl font-bold text-primary mb-4">Become a Member</h2>
+      <p class="text-on-surface-variant leading-relaxed mb-6">Families, newcomers, and long-time residents are all welcome. Reach out with your household details and we will guide you through current membership options and upcoming community activities.</p>
+      <a href="mailto:info@semaedmonton.ca?subject=SEMA%20Membership%20Inquiry" class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-bold">Email Membership Team <span class="material-symbols-outlined">arrow_forward</span></a>
+    </article>
+
+    <article id="volunteer" class="bg-surface-container-lowest rounded-2xl p-8 shadow-sm border border-slate-200">
+      <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center mb-6"><span class="material-symbols-outlined text-3xl">volunteer_activism</span></div>
+      <h2 class="font-headline text-2xl font-bold text-primary mb-4">Volunteer with SEMA</h2>
+      <p class="text-on-surface-variant leading-relaxed mb-6">We regularly need help with event setup, registration desks, stage coordination, photography, and community outreach. Let us know your interests and availability.</p>
+      <a href="mailto:info@semaedmonton.ca?subject=SEMA%20Volunteer%20Interest" class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-bold">Volunteer by Email <span class="material-symbols-outlined">arrow_forward</span></a>
+    </article>
+
+    <article id="sponsorship" class="bg-surface-container-lowest rounded-2xl p-8 shadow-sm border border-slate-200">
+      <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-6"><span class="material-symbols-outlined text-3xl">handshake</span></div>
+      <h2 class="font-headline text-2xl font-bold text-primary mb-4">Sponsorship</h2>
+      <p class="text-on-surface-variant leading-relaxed mb-6">Businesses and community partners can support cultural programs, family events, and service initiatives. We are happy to share current sponsorship options and visibility opportunities.</p>
+      <a href="mailto:info@semaedmonton.ca?subject=SEMA%20Sponsorship%20Inquiry" class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-bold">Contact for Sponsorship <span class="material-symbols-outlined">arrow_forward</span></a>
+    </article>
+  </section>
+
+  <section id="documents" class="pb-20 px-6 max-w-7xl mx-auto">
+    <div class="bg-surface-container-low rounded-3xl p-8 md:p-12">
+      <h2 class="font-headline text-3xl font-bold text-primary mb-4">Documents & Governance</h2>
+      <p class="text-on-surface-variant leading-relaxed max-w-3xl mb-8">If you need the charter, bylaws, or supporting governance documents, request them by email and the SEMA team will share the latest approved version.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="mailto:info@semaedmonton.ca?subject=SEMA%20Charter%20Request" class="bg-primary text-white px-6 py-3 rounded-xl font-bold">Request Charter</a>
+        <a href="mailto:info@semaedmonton.ca?subject=SEMA%20Bylaws%20Request" class="bg-white text-primary px-6 py-3 rounded-xl font-bold border border-slate-200">Request Bylaws</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-blue-950 text-slate-300">
+  <div class="max-w-7xl mx-auto px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="md:col-span-2">
+      <img alt="SEMA Logo" class="h-14 w-auto rounded-full mb-4" src="images/sema-logo.jpg"/>
+      <p class="max-w-md text-sm leading-relaxed">South Edmonton Malayalee Association supports cultural connection, community service, and family participation across Edmonton.</p>
+    </div>
+    <div>
+      <h4 class="text-white font-bold mb-4">Quick Links</h4>
+      <div class="space-y-2 text-sm">
+        <a class="block hover:text-amber-400" href="membership.html#membership">Membership</a>
+        <a class="block hover:text-amber-400" href="membership.html#volunteer">Volunteer</a>
+        <a class="block hover:text-amber-400" href="membership.html#sponsorship">Sponsorship</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="text-white font-bold mb-4">Support</h4>
+      <div class="space-y-2 text-sm">
+        <a class="block hover:text-amber-400" href="privacy.html">Privacy Policy</a>
+        <a class="block hover:text-amber-400" href="terms.html">Terms of Service</a>
+        <a class="block hover:text-amber-400" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 px-8 text-center text-xs text-slate-500">© 2026 South Edmonton Malayalee Association. All Rights Reserved.</div>
+</footer>
+</body>
+</html>
