@@ -86,72 +86,15 @@
 
 <!-- Timeline Section -->
 <section class="py-20 px-6 max-w-7xl mx-auto">
-  <div class="grid grid-cols-1 gap-16 relative">
-    <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-outline-variant/30 -translate-x-1/2"></div>
-
-    <!-- Event 1: Christmas & New Year -->
-    <div class="relative flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
-      <div class="w-full lg:w-5/12 order-2 lg:order-1">
-        <div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_12px_32px_rgba(25,28,29,0.06)] kasavu-accent">
-          <span class="text-on-tertiary-container font-bold text-sm tracking-widest uppercase mb-2 block">Winter Celebration</span>
-          <h2 class="text-primary font-headline text-3xl font-bold mb-3">Christmas &amp; New Year</h2>
-          <div class="flex items-center gap-2 text-on-surface-variant font-medium mb-4"><span class="material-symbols-outlined text-sm">calendar_today</span><span>December 2026</span></div>
-          <p class="text-on-surface-variant mb-6 leading-relaxed">Experience the warmth of a Kerala-style Christmas in the snowy landscape of Edmonton. A festive evening filled with carols, traditional dinner, and cultural performances as we ring in the New Year together.</p>
-          <a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="contact.html">Register Now <span class="material-symbols-outlined">arrow_forward</span></a>
-        </div>
-      </div>
-      <div class="hidden lg:flex w-2/12 justify-center z-10 order-2">
-        <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center ring-8 ring-surface"><span class="material-symbols-outlined">celebration</span></div>
-      </div>
-      <div class="w-full lg:w-5/12 order-1 lg:order-3">
-        <div class="rounded-xl overflow-hidden aspect-video shadow-lg">
-          <img alt="SEMA Christmas and New Year celebration poster" class="w-full h-full object-cover object-top" src="images/christmas-2025-poster.jpg"/>
-        </div>
-      </div>
-    </div>
-
-    <!-- Event 2: Blood Donation (Quarterly) -->
-    <div class="relative flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
-      <div class="w-full lg:w-5/12 order-1">
-        <div class="rounded-xl overflow-hidden aspect-video shadow-lg">
-          <img alt="Community service" class="w-full h-full object-cover" src="images/sema-cover-collage.jpg"/>
-        </div>
-      </div>
-      <div class="hidden lg:flex w-2/12 justify-center z-10">
-        <div class="w-12 h-12 bg-error text-white rounded-full flex items-center justify-center ring-8 ring-surface"><span class="material-symbols-outlined">bloodtype</span></div>
-      </div>
-      <div class="w-full lg:w-5/12 order-2">
-        <div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_12px_32px_rgba(25,28,29,0.06)] kasavu-accent">
-          <span class="text-on-tertiary-container font-bold text-sm tracking-widest uppercase mb-2 block">Social Initiative</span>
-          <h2 class="text-primary font-headline text-3xl font-bold mb-3">Blood Donation Drive</h2>
-          <div class="flex items-center gap-2 text-on-surface-variant font-medium mb-4"><span class="material-symbols-outlined text-sm">schedule</span><span>Held Quarterly</span></div>
-          <p class="text-on-surface-variant mb-6 leading-relaxed">Our commitment to the Edmonton community goes beyond culture. Join our quarterly blood donation drive in partnership with Canadian Blood Services. Small act, huge impact.</p>
-          <a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="contact.html">Sign up as Donor <span class="material-symbols-outlined">arrow_forward</span></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Event 3: Onam Celebration -->
-    <div class="relative flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
-      <div class="w-full lg:w-5/12 order-2 lg:order-1">
-        <div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_12px_32px_rgba(25,28,29,0.06)] kasavu-accent">
-          <span class="text-on-tertiary-container font-bold text-sm tracking-widest uppercase mb-2 block">Grand Festival</span>
-          <h2 class="text-primary font-headline text-3xl font-bold mb-3">Onam Celebration</h2>
-          <div class="flex items-center gap-2 text-on-surface-variant font-medium mb-4"><span class="material-symbols-outlined text-sm">calendar_today</span><span>September 2026</span></div>
-          <p class="text-on-surface-variant mb-6 leading-relaxed">The harvest festival of Kerala comes to South Edmonton. Join us for a grand Pookalam (floral carpet) competition, the magnificent Pulikali dance, and the authentic Onasadhya feast served on banana leaves.</p>
-          <a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="contact.html">Early Bird Registration <span class="material-symbols-outlined">arrow_forward</span></a>
-        </div>
-      </div>
-      <div class="hidden lg:flex w-2/12 justify-center z-10 order-2">
-        <div class="w-12 h-12 bg-tertiary-fixed-dim text-tertiary rounded-full flex items-center justify-center ring-8 ring-surface"><span class="material-symbols-outlined">local_florist</span></div>
-      </div>
-      <div class="w-full lg:w-5/12 order-1 lg:order-3">
-        <div class="rounded-xl overflow-hidden aspect-video shadow-lg">
-          <img alt="SEMA Onam celebration in South Edmonton" class="w-full h-full object-cover" src="images/onam-mahabali-group.jpg"/>
-        </div>
-      </div>
-    </div>
+  <div id="events-empty" class="hidden bg-surface-container-lowest rounded-2xl p-10 text-center shadow-sm">
+    <span class="material-symbols-outlined text-5xl text-slate-300 mb-4">event_busy</span>
+    <h2 class="text-2xl font-headline font-bold text-primary">No published events yet</h2>
+    <p class="text-on-surface-variant mt-3">Published events from the local admin panel will appear here.</p>
   </div>
+
+  <div id="featured-event-card" class="hidden overflow-hidden rounded-3xl bg-surface-container-lowest shadow-[0_12px_32px_rgba(25,28,29,0.06)]"></div>
+
+  <div id="events-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8"></div>
 </section>
 
 <!-- Community Engagement -->
@@ -213,10 +156,100 @@
   <div class="border-t border-white/10 py-6 px-8 text-center text-xs text-slate-500">© 2026 South Edmonton Malayalee Association. All Rights Reserved.</div>
 </footer>
 
+<script src="scripts/local-cms.js"></script>
 <script>
+  function escapeHtml(value) {
+    return String(value || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function formatEventDate(dateValue) {
+    if (!dateValue) {
+      return 'Date TBD';
+    }
+
+    return new Intl.DateTimeFormat('en-CA', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    }).format(new Date(dateValue + 'T00:00:00'));
+  }
+
+  function renderEventsFromCms() {
+    const publishedEvents = SemaCMS.getPublishedEvents();
+    const emptyState = document.getElementById('events-empty');
+    const featuredContainer = document.getElementById('featured-event-card');
+    const eventsGrid = document.getElementById('events-grid');
+
+    if (!publishedEvents.length) {
+      emptyState.classList.remove('hidden');
+      featuredContainer.classList.add('hidden');
+      eventsGrid.innerHTML = '';
+      return;
+    }
+
+    emptyState.classList.add('hidden');
+    const featuredEvent = publishedEvents.find(event => event.featured) || publishedEvents[0];
+    const otherEvents = publishedEvents.filter(event => event.id !== featuredEvent.id);
+
+    featuredContainer.classList.remove('hidden');
+    featuredContainer.innerHTML = `
+      <div class="grid grid-cols-1 lg:grid-cols-2">
+        <div class="relative min-h-[280px]">
+          <img src="${escapeHtml(SemaCMS.resolveAssetPath(featuredEvent.image))}" alt="${escapeHtml(featuredEvent.title)}" class="absolute inset-0 h-full w-full object-cover"/>
+          <div class="absolute inset-0 bg-gradient-to-r from-primary/85 to-primary/30"></div>
+        </div>
+        <div class="p-8 lg:p-10">
+          <span class="inline-flex items-center rounded-full bg-tertiary-fixed px-3 py-1 text-xs font-bold uppercase tracking-widest text-on-tertiary-fixed-variant">Featured Event</span>
+          <h2 class="mt-4 text-3xl font-headline font-bold text-primary">${escapeHtml(featuredEvent.title)}</h2>
+          <div class="mt-4 space-y-2 text-sm text-on-surface-variant">
+            <p class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">calendar_today</span>${escapeHtml(formatEventDate(featuredEvent.date))}</p>
+            <p class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">schedule</span>${escapeHtml(featuredEvent.time || 'Time TBD')}</p>
+            <p class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">location_on</span>${escapeHtml(featuredEvent.location || 'Location TBD')}</p>
+          </div>
+          <p class="mt-5 text-on-surface-variant leading-relaxed">${escapeHtml(featuredEvent.description)}</p>
+          <a href="contact.html" class="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 font-bold text-white transition-all hover:opacity-90">Register Interest <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+      </div>
+    `;
+
+    eventsGrid.innerHTML = otherEvents
+      .map(event => `
+        <article class="rounded-2xl bg-surface-container-lowest shadow-sm overflow-hidden">
+          <div class="aspect-video overflow-hidden">
+            <img src="${escapeHtml(SemaCMS.resolveAssetPath(event.image))}" alt="${escapeHtml(event.title)}" class="h-full w-full object-cover"/>
+          </div>
+          <div class="p-8">
+            <span class="text-on-tertiary-container font-bold text-[11px] tracking-widest uppercase">${escapeHtml(event.category)}</span>
+            <h3 class="mt-2 text-2xl font-headline font-bold text-primary">${escapeHtml(event.title)}</h3>
+            <div class="mt-4 space-y-2 text-sm text-on-surface-variant">
+              <p class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">calendar_today</span>${escapeHtml(formatEventDate(event.date))}</p>
+              <p class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">schedule</span>${escapeHtml(event.time || 'Time TBD')}</p>
+              <p class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">location_on</span>${escapeHtml(event.location || 'Location TBD')}</p>
+            </div>
+            <p class="mt-4 text-on-surface-variant leading-relaxed">${escapeHtml(event.description)}</p>
+            <a href="contact.html" class="mt-6 inline-flex items-center gap-2 font-bold text-primary hover:gap-4 transition-all">Register Interest <span class="material-symbols-outlined">arrow_forward</span></a>
+          </div>
+        </article>
+      `)
+      .join('');
+  }
+
   document.getElementById('mobile-menu-btn').addEventListener('click', () => {
     document.getElementById('mobile-menu').classList.toggle('hidden');
   });
+
+  window.addEventListener('storage', event => {
+    if (event.key === SemaCMS.STORAGE_KEY) {
+      renderEventsFromCms();
+    }
+  });
+
+  renderEventsFromCms();
 </script>
 </body>
 </html>
