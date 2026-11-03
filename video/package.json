@@ -11,7 +11,8 @@
     "render:sunrise:vertical": "remotion render SemaSunriseVertical out/sema-sunrise-vertical.mp4 --codec=h264",
     "render:swirl": "remotion render SemaSwirl out/sema-swirl.mp4 --codec=h264",
     "render:swirl:vertical": "remotion render SemaSwirlVertical out/sema-swirl-vertical.mp4 --codec=h264",
-    "render:all": "npm run render && npm run render:vertical && npm run render:sunrise && npm run render:sunrise:vertical && npm run render:swirl && npm run render:swirl:vertical",
+    "render:glass": "remotion render SemaGlassWide out/sema-glass-wide.mp4 --codec=h264 && remotion render SemaGlass out/sema-glass.mp4 --codec=h264 && remotion render SemaGlassVertical out/sema-glass-vertical.mp4 --codec=h264",
+    "render:all": "npm run render && npm run render:vertical && npm run render:sunrise && npm run render:sunrise:vertical && npm run render:swirl && npm run render:swirl:vertical && npm run render:glass",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

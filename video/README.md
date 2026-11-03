@@ -62,6 +62,23 @@ particle position computed from the frame number, so renders are deterministic. 
 | 7.1–9.3s  | 212–278 | Name, then tagline, resolve letter by letter (blur → sharp)          |
 | 9.3–12s   | 278–360 | Hold with a very slow push-in                                        |
 
+### Theme 4: 3D glass coin (6 s)
+
+| Composition         | Size      |
+| ------------------- | --------- |
+| `SemaGlassWide`     | 2688×768 (same as the reference clip: banner or LED wall) |
+| `SemaGlass`         | 1920×1080 |
+| `SemaGlassVertical` | 1080×1920 |
+
+A clean white-studio reveal. A thick glass coin appears small near the top, with a wobbling
+blob edge and grey and white liquid flowing across its face. It flies toward the camera while
+dropping to the centre and peaks at about 3× its final size. It then pulls back and tilts up to
+face the viewer as the logo fades in under the liquid, and a white gloss band slides off. The
+name and tagline sharpen in from large and blurred, in dark extra-bold and grey Montserrat.
+The camera move is played back from keyframes measured frame by frame on the reference clip
+(`CAM` in `src/glass/timeline.ts`). The coin is built from CSS 3D layers in
+`src/glass/components/GlassDisc.tsx`.
+
 ## Quick start
 
 ```bash
@@ -80,6 +97,9 @@ npx remotion render SemaSunrise         out/sema-sunrise.mp4          --codec=h2
 npx remotion render SemaSunriseVertical out/sema-sunrise-vertical.mp4 --codec=h264
 npx remotion render SemaSwirl           out/sema-swirl.mp4            --codec=h264
 npx remotion render SemaSwirlVertical   out/sema-swirl-vertical.mp4   --codec=h264
+npx remotion render SemaGlassWide       out/sema-glass-wide.mp4       --codec=h264
+npx remotion render SemaGlass           out/sema-glass.mp4            --codec=h264
+npx remotion render SemaGlassVertical   out/sema-glass-vertical.mp4   --codec=h264
 
 # or
 npm run render:all
