@@ -1,25 +1,20 @@
 import React from 'react';
 import {AbsoluteFill, Easing, interpolate, useCurrentFrame} from 'remotion';
 import {clamp, resolveAsset} from '../../lib/utils';
-import {smoothstep, useGlassLayout} from '../layout';
-import {GT} from '../timeline';
+import {pchip, smoothstep, useGlassLayout} from '../layout';
+import {CAM, GT} from '../timeline';
 import type {GlassPalette} from '../schema';
 
 /**
- * Camera state for a frame, fitted to the reference: the coin starts huge and close
- * (about 6x final size at 0.9s, overflowing the frame at 1.7s), steeply tilted, then
- * pulls back and tilts up to face the viewer by about 3s. Every curve is smooth and
- * monotonic (exponential falloff and smoothsteps), so there are no stops or kinks.
+ * Camera state for a frame, played back from keyframes measured on the reference
+ * through a monotone cubic, so it follows the reference exactly with no kinks.
+ * The coin appears small near the top, flies toward the camera while dropping to the
+ * centre, peaks at ~3.1x final size around 1.1–1.5s, then shrinks into place by
+ * ~3.2s while tilting up from ~80° to face the viewer.
  */
-export const discCamera = (frame: number, height: number) => {
-	const f = frame;
-	// size fitted to the reference at 0.9s / 1.7s / 2.1s / 2.5s / 3.0s ≈ 6x / 3.7x / 2.5x / 1.4x / 1x
-	const scale =
-		1 + 5.3 * Math.pow(1 - smoothstep(20, 98, f), 1.6) + 0.02 * smoothstep(GT.hold, 180, f);
-	const tilt = 78 * (1 - smoothstep(30, 78, f));
-	const ty = -0.6 * height * (1 - smoothstep(GT.camera[0], 40, f));
-	const rotZ = -6 * (1 - smoothstep(20, 80, f));
-	return {scale, tilt, ty, rotZ};
+export const discCamera = (frame: number, R: number) => {
+	const k = (key: readonly number[]) => pchip(CAM.frames, key, frame);
+	return {scale: k(CAM.scale), tilt: k(CAM.tilt), ty: k(CAM.dy) * R, tx: k(CAM.dx) * R};
 };
 
 /** Coin outline: starts as a wobbling blob, firms into a perfect circle. */
@@ -57,20 +52,19 @@ const SLICES = 44;
  * The 3D glass coin, built from CSS 3D layers: a face (logo, liquid, glass rim) plus
  * stacked slices behind it for thickness. Transforms are a pure function of the frame.
  * Mounted for the full timeline (0–180).
- *  - 10–32:  coin swings in from above, very close, tilted ~78°; blob edge firms into a circle
- *  - 10–110: grey and white liquid bands flow across the face; a white gloss band crosses last
- *  - 36–60:  logo fades in under the liquid
- *  - 10–96:  camera pulls back while the coin tilts up to face the viewer and settles
+ *  - 4–8:    coin appears small near the top (blob outline firms into a circle by 45)
+ *  - 6–96:   measured camera move (see CAM in timeline.ts)
+ *  - 6–110:  grey and white liquid bands flow across the face; a white gloss band crosses last
+ *  - 36–52:  logo fades in under the liquid
  */
 export const GlassDisc: React.FC<{colors: GlassPalette; logoSrc: string}> = ({colors, logoSrc}) => {
 	const frame = useCurrentFrame();
-	const {cx, cy, logoR: R, height} = useGlassLayout();
-	const cam = discCamera(frame, height);
+	const {cx, cy, logoR: R} = useGlassLayout();
+	const cam = discCamera(frame, R);
 
-	const grow = 0.3 + 0.7 * smoothstep(GT.discIn[0], GT.discIn[1], frame);
-	const wobble = 0.17 * (1 - smoothstep(20, 48, frame));
-	const outline = outlinePath(R * grow, wobble, frame);
-	const visible = interpolate(frame, [GT.discIn[0], GT.discIn[0] + 4], [0, 1], clamp);
+	const wobble = 0.17 * (1 - smoothstep(GT.wobbleEnd[0], GT.wobbleEnd[1], frame));
+	const outline = outlinePath(R, wobble, frame);
+	const visible = interpolate(frame, GT.appear, [0, 1], clamp);
 
 	const logoIn = interpolate(frame, GT.logoIn, [0, 1], {...clamp, easing: Easing.inOut(Easing.sin)});
 	const t = frame - GT.liquid[0];
@@ -107,7 +101,7 @@ export const GlassDisc: React.FC<{colors: GlassPalette; logoSrc: string}> = ({co
 					width: 0,
 					height: 0,
 					transformStyle: 'preserve-3d',
-					transform: `translateY(${cam.ty}px) scale3d(${cam.scale}, ${cam.scale}, ${cam.scale}) rotateX(${cam.tilt}deg) rotateZ(${cam.rotZ}deg)`,
+					transform: `translate(${cam.tx}px, ${cam.ty}px) scale3d(${cam.scale}, ${cam.scale}, ${cam.scale}) rotateX(${cam.tilt}deg)`,
 				}}
 			>
 				{/* thickness: slices behind the face, glassy-light near the face, dark body below */}

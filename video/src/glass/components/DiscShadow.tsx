@@ -6,35 +6,37 @@ import {GT} from '../timeline';
 import {discCamera} from './GlassDisc';
 
 /**
- * Soft contact shadow plus the long diagonal shadow toward the lower right that the
- * reference coin casts on the white floor. Follows the coin's camera move.
+ * Soft contact shadow plus the long soft shadow the reference coin casts on the white
+ * floor (down-left while it is close and tilted, swinging down-right as it settles).
  * Mounted for the full timeline (0–180), drawn beneath the coin.
  */
 export const DiscShadow: React.FC = () => {
 	const frame = useCurrentFrame();
-	const {cx, cy, logoR: R, height, u} = useGlassLayout();
-	const cam = discCamera(frame, height);
-	const on = interpolate(frame, [GT.discIn[0] + 4, GT.discIn[1]], [0, 1], clamp);
+	const {cx, cy, logoR: R, u} = useGlassLayout();
+	const cam = discCamera(frame, R);
+	const on = interpolate(frame, [GT.appear[0], GT.appear[1] + 6], [0, 1], clamp);
 	// a tilted coin casts a longer, flatter shadow
-	const flat = 1 - 0.55 * smoothstep(0, 78, cam.tilt);
+	const flat = 1 - 0.55 * smoothstep(0, 80, cam.tilt);
 	const s = cam.scale;
-	const x = cx;
+	const x = cx + cam.tx;
 	const y = cy + cam.ty;
+	// as in the reference, the long shadow trails down-left early on, then swings down-right
+	const angle = 150 - 115 * smoothstep(30, 62, frame);
 
 	return (
 		<AbsoluteFill style={{opacity: on}}>
-			{/* long diagonal shadow */}
+			{/* long shadow */}
 			<div
 				style={{
 					position: 'absolute',
 					left: x,
 					top: y - R * s * 0.45 * flat,
-					width: R * s * 2.6,
+					width: R * s * 2.4,
 					height: R * s * 0.9 * flat,
 					transformOrigin: '0% 50%',
-					transform: 'rotate(34deg)',
+					transform: `rotate(${angle}deg)`,
 					borderRadius: '50%',
-					background: 'linear-gradient(90deg, rgba(0,0,0,0.22), rgba(0,0,0,0.08) 55%, transparent)',
+					background: 'linear-gradient(90deg, rgba(0,0,0,0.2), rgba(0,0,0,0.07) 55%, transparent)',
 					filter: `blur(${22 * u}px)`,
 				}}
 			/>
@@ -47,7 +49,7 @@ export const DiscShadow: React.FC = () => {
 					width: R * s * 2.1,
 					height: R * s * 2 * flat,
 					borderRadius: '50%',
-					background: 'radial-gradient(ellipse, rgba(0,0,0,0.28) 35%, rgba(0,0,0,0) 70%)',
+					background: 'radial-gradient(ellipse, rgba(0,0,0,0.26) 35%, rgba(0,0,0,0) 70%)',
 					filter: `blur(${12 * u}px)`,
 				}}
 			/>
