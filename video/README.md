@@ -12,6 +12,30 @@ Edmonton skyline.
 
 Both run at 30 fps for 300 frames, on the same timeline with a responsive layout.
 
+### Theme 2: "Two Homes, One Sunrise"
+
+| Composition           | Size      |
+| --------------------- | --------- |
+| `SemaSunrise`         | 1920×1080 |
+| `SemaSunriseVertical` | 1080×1920 |
+
+A bright daytime counterpart. Dawn breaks over the Kerala backwaters as a chundan vallam
+(snake boat) races past under its muthukuda umbrellas. A diagonal gold seam wipes the scene
+into Alberta's canola prairie, with a red grain elevator and Edmonton on the horizon. The same
+sun climbs through both homes, throws its rays, and irises open into the SEMA logo. A
+frosted card brings in the title word by word, and the tagline tracks in. The video ends on
+cream. Typography is DM Serif Display with Montserrat. Code: `src/sunrise/`, with every frame
+number in `src/sunrise/timeline.ts`.
+
+| Time      | Frames  | What happens                                                          |
+| --------- | ------- | --------------------------------------------------------------------- |
+| 0–4s      | 0–120   | Dawn on the backwaters, sun rises, palms lean in, snake boat races by |
+| 4–5.7s    | 122–170 | Gold seam wipes Kerala → prairie, sky turns from dawn to morning      |
+| 5.2–6s    | 156–180 | Sun grows, sunburst rays, logo irises open from the sun               |
+| 6–8s      | 180–240 | Frosted card: title word by word, brush underline, tagline tracks in  |
+| 8–9s      | 196–262 | Canada geese cross the sky, light glints across the card              |
+| 9–10s     | 270–300 | Settle, fade to cream                                                 |
+
 ## Quick start
 
 ```bash
@@ -25,6 +49,9 @@ npm run dev            # opens Remotion Studio — edit props live in the right 
 ```bash
 npx remotion render SemaIntro         out/sema-intro.mp4          --codec=h264
 npx remotion render SemaIntroVertical out/sema-intro-vertical.mp4 --codec=h264
+
+npx remotion render SemaSunrise         out/sema-sunrise.mp4          --codec=h264
+npx remotion render SemaSunriseVertical out/sema-sunrise-vertical.mp4 --codec=h264
 
 # or
 npm run render:all

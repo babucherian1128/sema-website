@@ -1,6 +1,5 @@
 import React from 'react';
 import {AbsoluteFill, Audio, interpolate, Sequence, useCurrentFrame, useVideoConfig} from 'remotion';
-import {getStaticFiles} from '@remotion/studio';
 import {Background} from './components/Background';
 import {ConnectionNetwork} from './components/ConnectionNetwork';
 import {FallingPetals} from './components/FallingPetals';
@@ -12,17 +11,11 @@ import {Pookalam} from './components/Pookalam';
 import {Skyline} from './components/Skyline';
 import {Tagline} from './components/Tagline';
 import {TitleText} from './components/TitleText';
+import {hasMusic} from './lib/music';
 import {clamp, resolveAsset} from './lib/utils';
 import type {SemaIntroProps} from './schema';
 import {DURATION, T} from './timeline';
 import './fonts';
-
-/** Music is optional: only mounted when the file exists in public/ (or is a URL). */
-const hasMusic = (src: string) => {
-	if (!src) return false;
-	if (/^(https?:|data:)/.test(src)) return true;
-	return getStaticFiles().some((f) => f.name === src.replace(/^\//, ''));
-};
 
 export const SemaIntro: React.FC<SemaIntroProps> = ({title, tagline, logoSrc, musicSrc, colors}) => {
 	const frame = useCurrentFrame();

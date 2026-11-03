@@ -7,7 +7,7 @@ import type {Palette} from '../schema';
 
 /* ---------- silhouette geometry (origin = base centre, up = -y) ---------- */
 
-const palmPath = (h: number, lean: number, u: number) => {
+export const palmPath = (h: number, lean: number, u: number) => {
 	const tx = lean;
 	const ty = -h;
 	const b = 6 * u;

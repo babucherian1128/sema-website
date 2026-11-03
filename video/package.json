@@ -7,7 +7,9 @@
     "dev": "remotion studio",
     "render": "remotion render SemaIntro out/sema-intro.mp4 --codec=h264",
     "render:vertical": "remotion render SemaIntroVertical out/sema-intro-vertical.mp4 --codec=h264",
-    "render:all": "npm run render && npm run render:vertical",
+    "render:sunrise": "remotion render SemaSunrise out/sema-sunrise.mp4 --codec=h264",
+    "render:sunrise:vertical": "remotion render SemaSunriseVertical out/sema-sunrise-vertical.mp4 --codec=h264",
+    "render:all": "npm run render && npm run render:vertical && npm run render:sunrise && npm run render:sunrise:vertical",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
