@@ -2,7 +2,7 @@ import {useVideoConfig} from 'remotion';
 
 /**
  * Layout measured from the reference (2688x768): final coin diameter 50.3% of the
- * height, centred at 39.2%; title cap-line centred at 73.7%, tagline at 82.3%.
+ * height (visible edge), centred at 38.5%; title cap-line centred at 73.7%, tagline at 82.3%.
  * For other landscape sizes the same block is scaled by `base` and centred vertically.
  */
 export const useGlassLayout = () => {
@@ -12,14 +12,14 @@ export const useGlassLayout = () => {
 	if (!vertical) {
 		const base = Math.min(height, width / 2.5);
 		const Y = (frac: number) => (height - 0.703 * base) / 2 + (frac - 0.141) * base;
-		const logoR = 0.244 * base;
+		const logoR = 0.262 * base;
 		return {
 			width,
 			height,
 			vertical,
 			u: base / 768,
 			cx: width / 2,
-			cy: Y(0.392),
+			cy: Y(0.385),
 			logoR,
 			titleSize: 0.074 * base,
 			taglineSize: 0.06 * base,
