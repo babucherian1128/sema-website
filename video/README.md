@@ -55,7 +55,7 @@ npx remotion render SemaIntro out/onam.mp4 --codec=h264 \
 
 ## Assets
 
-- `public/sema-logo.png` is the badge from `docs/images/sema-logo.jpg`, cut out with a
+- `public/sema-logo.png` is the official SEMA badge (with the SEMA wordmark), cut out with a
   circular transparent mask.
 - `public/intro-music.mp3` is optional. Drop a track in and it fades in over the first
   0.5 s and out over the last 1 s. Use music you have the rights to.
