@@ -5,6 +5,9 @@ import {defaultSemaIntroProps, semaIntroSchema} from './schema';
 import {DURATION, FPS} from './timeline';
 import {SemaSunrise} from './sunrise/SemaSunrise';
 import {defaultSunriseProps, sunriseSchema} from './sunrise/schema';
+import {SemaSwirl} from './swirl/SemaSwirl';
+import {defaultSwirlProps, swirlSchema} from './swirl/schema';
+import {SWIRL_DURATION} from './swirl/timeline';
 
 export const RemotionRoot: React.FC = () => {
 	return (
@@ -54,6 +57,29 @@ export const RemotionRoot: React.FC = () => {
 					height={1920}
 					schema={sunriseSchema}
 					defaultProps={defaultSunriseProps}
+				/>
+			</Folder>
+			{/* Theme 3: particle swirl → flash → logo reveal (12 s) */}
+			<Folder name="SEMA-Swirl">
+				<Composition
+					id="SemaSwirl"
+					component={SemaSwirl}
+					durationInFrames={SWIRL_DURATION}
+					fps={FPS}
+					width={1920}
+					height={1080}
+					schema={swirlSchema}
+					defaultProps={defaultSwirlProps}
+				/>
+				<Composition
+					id="SemaSwirlVertical"
+					component={SemaSwirl}
+					durationInFrames={SWIRL_DURATION}
+					fps={FPS}
+					width={1080}
+					height={1920}
+					schema={swirlSchema}
+					defaultProps={defaultSwirlProps}
 				/>
 			</Folder>
 		</>

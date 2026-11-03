@@ -36,6 +36,30 @@ number in `src/sunrise/timeline.ts`.
 | 8–9s      | 196–262 | Canada geese cross the sky, light glints across the card              |
 | 9–10s     | 270–300 | Settle, fade to cream                                                 |
 
+### Theme 3: Particle swirl (12 s)
+
+| Composition         | Size      |
+| ------------------- | --------- |
+| `SemaSwirl`         | 1920×1080 |
+| `SemaSwirlVertical` | 1080×1920 |
+
+A gold particle-vortex logo reveal. Gold dust and bokeh drift. Four comets streak in from
+the edges, then ribbons of light and dashed ember streams spiral into a tightening vortex.
+The vortex speeds up, bursts into rays and a white flash, and the logo settles out of the
+flash with an anamorphic streak. The name and tagline flicker in letter by letter, in random
+order. The vortex is drawn on a `<canvas>` each frame, with every particle position computed
+from the frame number, so renders are deterministic. Code: `src/swirl/`, with timing in
+`src/swirl/timeline.ts`. It runs 360 frames at 30 fps.
+
+| Time      | Frames  | What happens                                                   |
+| --------- | ------- | -------------------------------------------------------------- |
+| 0–1.3s    | 0–38    | Gold backdrop, drifting dust and bokeh, slow push-in           |
+| 1.3–4.7s  | 38–140  | Four comets streak in from the edges and spiral to the centre  |
+| 2.3–6.3s  | 70–190  | Light ribbons fill in; the vortex tightens and accelerates     |
+| 6.3–8.4s  | 190–252 | Streams straighten into rays, burst, white flash, logo settles |
+| 8.3–9.5s  | 248–290 | Name, then tagline, flicker in letter by letter                |
+| 10–12s    | 300–360 | Light sweep across the logo, hold                              |
+
 ## Quick start
 
 ```bash
@@ -52,6 +76,8 @@ npx remotion render SemaIntroVertical out/sema-intro-vertical.mp4 --codec=h264
 
 npx remotion render SemaSunrise         out/sema-sunrise.mp4          --codec=h264
 npx remotion render SemaSunriseVertical out/sema-sunrise-vertical.mp4 --codec=h264
+npx remotion render SemaSwirl           out/sema-swirl.mp4            --codec=h264
+npx remotion render SemaSwirlVertical   out/sema-swirl-vertical.mp4   --codec=h264
 
 # or
 npm run render:all

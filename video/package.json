@@ -9,7 +9,9 @@
     "render:vertical": "remotion render SemaIntroVertical out/sema-intro-vertical.mp4 --codec=h264",
     "render:sunrise": "remotion render SemaSunrise out/sema-sunrise.mp4 --codec=h264",
     "render:sunrise:vertical": "remotion render SemaSunriseVertical out/sema-sunrise-vertical.mp4 --codec=h264",
-    "render:all": "npm run render && npm run render:vertical && npm run render:sunrise && npm run render:sunrise:vertical",
+    "render:swirl": "remotion render SemaSwirl out/sema-swirl.mp4 --codec=h264",
+    "render:swirl:vertical": "remotion render SemaSwirlVertical out/sema-swirl-vertical.mp4 --codec=h264",
+    "render:all": "npm run render && npm run render:vertical && npm run render:sunrise && npm run render:sunrise:vertical && npm run render:swirl && npm run render:swirl:vertical",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
