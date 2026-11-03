@@ -43,22 +43,24 @@ number in `src/sunrise/timeline.ts`.
 | `SemaSwirl`         | 1920×1080 |
 | `SemaSwirlVertical` | 1080×1920 |
 
-A gold particle-vortex logo reveal. Gold dust and bokeh drift. Four comets streak in from
-the edges, then ribbons of light and dashed ember streams spiral into a tightening vortex.
-The vortex speeds up, bursts into rays and a white flash, and the logo settles out of the
-flash with an anamorphic streak. The name and tagline flicker in letter by letter, in random
-order. The vortex is drawn on a `<canvas>` each frame, with every particle position computed
-from the frame number, so renders are deterministic. Code: `src/swirl/`, with timing in
-`src/swirl/timeline.ts`. It runs 360 frames at 30 fps.
+A gold particle-vortex logo reveal, modelled on a reference clip. Gold dust and bokeh drift.
+Four comets streak in from the edges, then ribbons of light and dashed ember streams spiral into
+a tightening vortex. The vortex bursts into rays and a bright flash. The logo is born tiny in
+the eye of the vortex, on top of the flash, and grows smoothly toward the camera with no bounce.
+The name and tagline then resolve letter by letter, in random order: each letter fades in from
+a blur and stays, without blinking. The vortex is drawn on a `<canvas>` each frame, with every
+particle position computed from the frame number, so renders are deterministic. Code:
+`src/swirl/`, with timing in `src/swirl/timeline.ts`. It runs 360 frames at 30 fps.
 
-| Time      | Frames  | What happens                                                   |
-| --------- | ------- | -------------------------------------------------------------- |
-| 0–1.3s    | 0–38    | Gold backdrop, drifting dust and bokeh, slow push-in           |
-| 1.3–4.7s  | 38–140  | Four comets streak in from the edges and spiral to the centre  |
-| 2.3–6.3s  | 70–190  | Light ribbons fill in; the vortex tightens and accelerates     |
-| 6.3–8.4s  | 190–252 | Streams straighten into rays, burst, white flash, logo settles |
-| 8.3–9.5s  | 248–290 | Name, then tagline, flicker in letter by letter                |
-| 10–12s    | 300–360 | Light sweep across the logo, hold                              |
+| Time      | Frames  | What happens                                                         |
+| --------- | ------- | -------------------------------------------------------------------- |
+| 0–1.3s    | 0–38    | Gold backdrop, drifting dust and bokeh, slow push-in                 |
+| 1.3–4.7s  | 38–140  | Four comets streak in from the edges and spiral to the centre        |
+| 2.3–5.9s  | 70–178  | Light ribbons fill in; the vortex tightens and accelerates           |
+| 5.9–7.6s  | 178–228 | Streams straighten into rays and burst; flash glow behind the logo   |
+| 6.7–8.1s  | 200–244 | Logo born tiny in the vortex centre, grows to full size (ease-out)   |
+| 7.1–9.3s  | 212–278 | Name, then tagline, resolve letter by letter (blur → sharp)          |
+| 9.3–12s   | 278–360 | Hold with a very slow push-in                                        |
 
 ## Quick start
 

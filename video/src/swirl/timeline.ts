@@ -11,15 +11,16 @@ export const SW = {
 	// 2.3–6.5s: light streams fill in behind them and the vortex tightens and speeds up
 	streams: 70,
 	accelerate: 150,
-	// 6.3–7.5s: streams straighten into rays, burst, white flash
-	burst: [190, 224] as const,
-	flash: [205, 220, 230, 252] as const,
-	// 7.3s+: logo emerges from the flash, anamorphic streak
-	logo: 218,
-	// 8.3–9.5s: name + tagline flicker in, letters in random order
-	title: 248,
-	tagline: 262,
-	letterWindow: 30,
-	// 10s: light sweep across the logo, then hold
-	sweep: [300, 328] as const,
+	// 5.9–6.9s: streams straighten into rays and burst; flash glow 6.5–7.6s (timed to the reference)
+	burst: [178, 206] as const,
+	flash: [194, 203, 208, 228] as const,
+	// 6.67s: logo is born tiny in the eye of the vortex, on top of the flash,
+	// and grows smoothly to full size by ~8.1s (as in the reference)
+	logo: 200,
+	logoGrow: [200, 244] as const,
+	// 7.1–9.3s: name, then tagline, resolve letter by letter (blur → sharp, no blinking)
+	title: 212,
+	tagline: 222,
+	letterWindow: 40,
+	// 9.3–12s: hold with a very slow push-in
 } as const;

@@ -7,7 +7,8 @@ export const useSwirlLayout = () => {
 	const u = Math.min(width, height) / 1080;
 	const cx = width / 2;
 	const cy = height * (vertical ? 0.4 : 0.41);
-	const logoR = (vertical ? 330 : 225) * u;
+	// ~half the frame height in 16:9, as in the reference
+	const logoR = (vertical ? 360 : 268) * u;
 	return {
 		width,
 		height,
@@ -16,8 +17,8 @@ export const useSwirlLayout = () => {
 		cx,
 		cy,
 		logoR,
-		textTop: cy + logoR + (vertical ? 80 : 46) * u,
-		titleSize: (vertical ? 50 : 40) * u,
+		textTop: cy + logoR + (vertical ? 70 : 34) * u,
+		titleSize: (vertical ? 50 : 38) * u,
 		taglineSize: (vertical ? 31 : 24) * u,
 		// distance from centre to the farthest corner, so spirals start off-screen
 		rMax: Math.hypot(Math.max(cx, width - cx), Math.max(cy, height - cy)) * 1.08,
